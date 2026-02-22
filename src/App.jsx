@@ -177,7 +177,7 @@ export default function App() {
       </aside>
 
       {/* Main */}
-      <main style={{ marginLeft: sidebarWidth, flex: 1, padding: '28px 24px', minHeight: '100vh', transition: 'margin-left 0.25s ease' }}>
+      <main style={{ marginLeft: sidebarWidth, flex: 1, padding: activeTab === 'chatbook' ? '20px 20px 0' : '28px 24px', minHeight: '100vh', transition: 'margin-left 0.25s ease', overflow: activeTab === 'chatbook' ? 'hidden' : 'auto', height: activeTab === 'chatbook' ? '100vh' : 'auto', display: 'flex', flexDirection: 'column' }}>
         {!isLoaded ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             {[1,2,3].map(i => <div key={i} className="shimmer" style={{ height: 80, borderRadius: 14 }} />)}
@@ -205,5 +205,5 @@ export default function App() {
     </div>
   );
 }
-// updated: 2026-02-22
+// updated: 2026-02-22b
 

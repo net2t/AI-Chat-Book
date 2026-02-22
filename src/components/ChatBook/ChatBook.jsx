@@ -172,7 +172,7 @@ export default function ChatBook({ chats, stats, filters, updateFilter, filtered
   const allTags = stats?.allTags || [];
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 56px)', gap: 10 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0, gap: 10, paddingBottom: 12 }}>
 
       {/* ── TOP BAR: Search + Sheet Export + Filter Toggle ── */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
